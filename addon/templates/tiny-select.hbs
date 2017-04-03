@@ -1,0 +1,27 @@
+<select disabled={{disabled}} class="{{class}}" {{action 'change' on='change'}}>
+  {{#if prompt}}
+    <option disabled selected={{is-not selection}}>
+      {{prompt}}
+    </option>
+  {{/if}}
+
+  {{#if groups}}
+    {{#each groups as |group|}}
+      <optgroup label={{group.label}}>
+        {{#each (options-for-group options group.value optionGroupPath) as |item|}}
+          <option value={{read-path item optionValuePath}}
+                  selected={{is-equal (read-path item optionValuePath) selection}}>
+            {{read-path item optionLabelPath}}
+          </option>
+        {{/each}}
+      </optgroup>
+    {{/each}}
+  {{else}}
+    {{#each options as |item|}}
+      <option value={{read-path item optionValuePath}}
+              selected={{is-equal (read-path item optionValuePath) selection}}>
+        {{read-path item optionLabelPath}}
+      </option>
+    {{/each}}
+  {{/if}}
+</select>
