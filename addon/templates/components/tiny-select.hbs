@@ -1,6 +1,6 @@
 <select disabled={{disabled}} class="{{class}}" {{action 'change' on='change'}}>
   {{#if prompt}}
-    <option disabled selected={{is-not selection}}>
+    <option selected={{is-not selection}} value={{promptValue}}>
       {{prompt}}
     </option>
   {{/if}}
