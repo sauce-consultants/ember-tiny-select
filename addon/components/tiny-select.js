@@ -1,6 +1,7 @@
 import Ember from 'ember';
-
+import layout from '../templates/components/tiny-select';
 export default Ember.Component.extend({
+  layout: layout,
   options: [],
   prompt: null,
   optionValuePath: 'value',
@@ -16,15 +17,14 @@ export default Ember.Component.extend({
   actions: {
     change: function() {
       let selectedIndex = this.$('select')[0].selectedIndex;
-      let content = this.get('content');
+      let options = this.get('options');
 
       // decrement index by 1 if we have a prompt
       let hasPrompt = !!this.get('prompt');
-      let contentIndex = hasPrompt ? selectedIndex - 1 : selectedIndex;
-      let _selection = content[contentIndex];
+      let optionIndex = hasPrompt ? selectedIndex - 1 : selectedIndex;
+      let _selection = options[optionIndex];
 
       this.sendAction('willChangeAction', _selection);
-
       if (this.get('optionValuePath')) {
         this.set('selection', _selection[this.get('optionValuePath')]);
       } else {
