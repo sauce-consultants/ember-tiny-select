@@ -1,12 +1,14 @@
 {
   "name": "ember-tiny-select",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.0.1",
+  "description": "A tiny select box addon for your Ember projects.",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "select",
+    "select-list"
   ],
   "license": "MIT",
-  "author": "",
+  "author": "Matt Weldon",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -42,6 +44,7 @@
     "ember-resolver": "^2.0.3",
     "loader.js": "^4.0.10"
   },
+  "repository": "https://github.com/sauce-consultants/ember-tiny-select",
   "engines": {
     "node": ">= 0.12.0"
   },
