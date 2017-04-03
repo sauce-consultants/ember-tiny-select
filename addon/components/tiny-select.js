@@ -7,6 +7,7 @@ export default Ember.Component.extend({
   optionValuePath: 'value',
   optionLabelPath: 'label',
   tagName: 'select',
+  attributeBindings: ['disabled'],
   init: function () {
     this._super(...arguments);
     if (!this.get('content')) {
@@ -32,5 +33,3 @@ export default Ember.Component.extend({
     this.sendAction('didChangeAction', _selection);
   },
 });
-
-// <select disabled={{disabled}} class="{{class}}" {{action 'change' on='change'}}>
