@@ -1,6 +1,6 @@
 {
   "name": "ember-tiny-select",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A tiny select box addon for your Ember projects.",
   "keywords": [
     "ember-addon",
@@ -13,7 +13,7 @@
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "https://github.com/sauce-consultants/ember-tiny-select",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
@@ -44,7 +44,6 @@
     "ember-resolver": "^2.0.3",
     "loader.js": "^4.0.10"
   },
-  "repository": "https://github.com/sauce-consultants/ember-tiny-select",
   "engines": {
     "node": ">= 0.12.0"
   },
